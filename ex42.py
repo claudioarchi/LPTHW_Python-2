@@ -1,6 +1,7 @@
 # Animal is-a object (yes, sort of confusing) look at the extra credit
 class Animal(object):
-    pass
+    def __init__(self, type):
+
 
 # is-a
 class Dog(Animal):
@@ -9,12 +10,14 @@ class Dog(Animal):
         # has-a name
         self.name = name
 
+
 # is-a
 class Cat(Animal):
 
     def __init__(self, name):
         # self has-a name of some sort
         self.name = name
+
 
 # is-a
 class Person(object):
@@ -26,6 +29,7 @@ class Person(object):
         # Person has-a pet of some kind
         self.pet = None
 
+
 # is-a
 class Employee(Person):
 
@@ -35,13 +39,16 @@ class Employee(Person):
         # self has some salary
         self.salary = salary
 
+
 # is-a
 class Fish(object):
     pass
 
+
 # is-a
 class Salmon(Fish):
     pass
+
 
 # is-a
 class Halibut(Fish):
