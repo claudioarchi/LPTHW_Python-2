@@ -2,7 +2,6 @@ import sys
 print(sys.version)
 
 
-# Animal is-a object
 class Animal(object):
     def __init__(self, species):
         self.species = species
@@ -24,10 +23,16 @@ class Animal(object):
             print ("A %s is not an animal I recognize" % (self.species))
 
 
-cat = Animal("Feline")
+Animal_list = {
+    'lion': 'carnivora', 'bat': 'mammal', 'anaconda': 'reptile',
+    'salmon': 'fish', 'whale': 'cetaceans', 'spider': 'arachnida',
+    'grasshopper': 'insect', 'aligator': 'reptile', 'rat': 'rodents',
+    'bear': 'mammal', 'frog': 'amphibian', 'turtles': 'testudines'
+}
+
+_input = raw_input("> ")
+# print "A %s is a %s " % (_input, Animal_list[_input])
+
+cat = Animal(_input)
 cat.animal_type()
 cat.animal_action()
-
-olga = Animal("Canine")
-olga.animal_type()
-olga.animal_action()
